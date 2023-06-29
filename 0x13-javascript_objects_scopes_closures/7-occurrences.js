@@ -1,10 +1,22 @@
 #!/usr/bin/node
+/**
+ * function to count number of occurrences in a list
+ * @param {list} list - list ti examine
+ * @param {number} searchElement - element to search for
+ * @returns {number} - the number of occurrences in a list
+ */
 exports.nbOccurences = function (list, searchElement) {
-  let nOccurrences = 0;
-  for (let i = 0; i < list.length; i++) {
-    if (searchElement === list[i]) {
-      nOccurrences++;
+  let count = 0;
+  list.forEach((item) => {
+    if (item === searchElement) {
+      count++;
     }
-  }
-  return nOccurrences;
+  });
+  return count;
 };
+// alternative to arrow function
+// list.forEach(function (item) {
+//   if (item === searchElement) {
+//     i++;
+//   }
+// });

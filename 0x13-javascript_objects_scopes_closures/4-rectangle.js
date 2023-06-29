@@ -1,12 +1,16 @@
 #!/usr/bin/node
 class Rectangle {
   constructor (w, h) {
-    if ((w > 0) && (h > 0)) {
+    if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
     }
   }
 
+  /**
+   * @property {method} print - prints the rectangle using the character X
+   * @returns void
+   */
   print () {
     for (let i = 0; i < this.height; i++) {
       let s = '';
@@ -17,12 +21,20 @@ class Rectangle {
     }
   }
 
+  /**
+   * @property {method} rotate - exchanges the width and the height of the rectangle
+   * @returns void
+   */
   rotate () {
-    const aux = this.width;
+    const temp = this.width;
     this.width = this.height;
-    this.height = aux;
+    this.height = temp;
   }
 
+  /**
+   * @property {method} double - multiples the width and the height of the rectangle by 2
+   * @returns void
+   */
   double () {
     this.width *= 2;
     this.height *= 2;
