@@ -1,7 +1,10 @@
 #!/usr/bin/node
-const SquareP = require('./5-square');
-
-class Square extends SquareP {
+const square = require('./5-square');
+class Square extends square {
+  /**
+   * @property {method} charPrint - prints the rectangle using the character c
+   * @returns void
+   */
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
@@ -15,5 +18,4 @@ class Square extends SquareP {
     }
   }
 }
-
 module.exports = Square;
